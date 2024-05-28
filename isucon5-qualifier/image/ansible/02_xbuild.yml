@@ -1,8 +1,7 @@
 ---
 - hosts: imageservers
   become: yes
-  become_method: sudo
-  sudo_user: isucon
+  become_user: isucon
   gather_facts: no
   tasks:
     - git:

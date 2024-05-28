@@ -2,8 +2,7 @@
 - hosts: imageservers
   gather_facts: no
   become: yes
-  become_method: sudo
-  sudo_user: isucon
+  become_user: isucon
   tasks:
     - git:
         repo=https://github.com/isucon/isucon5-qualify.git
