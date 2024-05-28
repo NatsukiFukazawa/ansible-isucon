@@ -2,7 +2,7 @@
 - hosts: imageservers
   gather_facts: no
   become: yes
-become_method: sudo
+  become_method: sudo
   sudo_user: isucon
   tasks:
     - git:
@@ -77,7 +77,7 @@ become_method: sudo
 
 - hosts: imageservers
   become: yes
-become_method: sudo
+  become_method: sudo
   gather_facts: no
   tasks:
     - copy: src=../files/env.sh dest=/home/isucon/env.sh owner=isucon mode=644
