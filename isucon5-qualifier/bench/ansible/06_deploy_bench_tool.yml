@@ -2,7 +2,7 @@
 - hosts: benchservers
   gather_facts: no
   become: yes
-become_methed: sudo
+become_method: sudo
   sudo_user: isucon
   tasks:
     - git:
@@ -19,7 +19,7 @@ become_methed: sudo
 
 - hosts: benchservers
   become: yes
-become_methed: sudo
+become_method: sudo
   gather_facts: no
   tasks:
     - copy: src=../files/env.bench.sh dest=/home/isucon/env.bench.sh owner=isucon mode=644

@@ -1,7 +1,7 @@
 ---
 - hosts: imageservers
   become: yes
-become_methed: sudo
+become_method: sudo
   gather_facts: no
   tasks:
     - apt: name=nginx state=present

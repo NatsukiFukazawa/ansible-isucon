@@ -1,7 +1,7 @@
 ---
 - hosts: benchservers
   become: yes
-become_methed: sudo
+become_method: sudo
   sudo_user: isucon
   gather_facts: no
   tasks:
@@ -16,7 +16,7 @@ become_methed: sudo
 
 - hosts: benchservers
   become: yes
-become_methed: sudo
+become_method: sudo
   gather_facts: no
   tasks:
     # java
