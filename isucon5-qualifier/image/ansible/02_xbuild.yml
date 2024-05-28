@@ -1,6 +1,7 @@
 ---
 - hosts: imageservers
-  sudo: yes
+  become: yes
+become_methed: sudo
   sudo_user: isucon
   gather_facts: no
   tasks:
@@ -23,7 +24,8 @@
         creates: /home/isucon/.local/go/bin/go
 
 - hosts: imageservers
-  sudo: yes
+  become: yes
+become_methed: sudo
   gather_facts: no
   tasks:
     # java

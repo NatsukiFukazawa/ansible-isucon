@@ -1,7 +1,8 @@
 ---
 - hosts: imageservers
   gather_facts: no
-  sudo: yes
+  become: yes
+become_methed: sudo
   sudo_user: isucon
   tasks:
     - git:
@@ -29,7 +30,8 @@
 
 - hosts: imageservers
   gather_facts: no
-  sudo: yes
+  become: yes
+become_methed: sudo
   tasks:
     - name: copy my.cnf
       copy: src=../files/my.cnf dest=/etc/my.cnf owner=root mode=644

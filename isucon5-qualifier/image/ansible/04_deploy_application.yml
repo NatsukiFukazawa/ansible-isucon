@@ -1,7 +1,8 @@
 ---
 - hosts: imageservers
   gather_facts: no
-  sudo: yes
+  become: yes
+become_methed: sudo
   sudo_user: isucon
   tasks:
     - git:
@@ -75,7 +76,8 @@
     # - command: sudo su - isucon /home/isucon/init.sh
 
 - hosts: imageservers
-  sudo: yes
+  become: yes
+become_methed: sudo
   gather_facts: no
   tasks:
     - copy: src=../files/env.sh dest=/home/isucon/env.sh owner=isucon mode=644

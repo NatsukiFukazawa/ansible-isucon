@@ -1,6 +1,7 @@
 ---
 - hosts: benchservers
-  sudo: yes
+  become: yes
+become_methed: sudo
   sudo_user: isucon
   gather_facts: no
   tasks:
@@ -14,7 +15,8 @@
         creates: /home/isucon/.local/ruby/bin/ruby
 
 - hosts: benchservers
-  sudo: yes
+  become: yes
+become_methed: sudo
   gather_facts: no
   tasks:
     # java
