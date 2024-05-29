@@ -1,6 +1,7 @@
 ---
 - hosts: all
-  sudo: yes
+  become: yes
+  become_method: sudo
   tasks:
     - user: name=isucon groups=wheel
     - lineinfile: dest=/etc/sudoers state=present regexp='^%wheel ALL\=' line='%wheel ALL=(ALL) NOPASSWD:ALL' validate='visudo -cf %s'
@@ -38,7 +39,8 @@
         chmod a+x /home/isucon/.bashrc
     - command: chown -R isucon:isucon /tmp/isucon
     - command: rsync -avz --delete --exclude-from=/tmp/isucon4/qualifier/ami/files/rsync_exclude.txt /tmp/isucon/ /home/isucon/
-      sudo: yes
+      become: yes
+      become_method: sudo
   post_tasks:
     - command: ./init.sh
       sudo_user: isucon

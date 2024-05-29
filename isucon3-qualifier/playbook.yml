@@ -1,5 +1,6 @@
 - hosts: all
-  sudo: yes
+  become: yes
+  become_method: sudo
   tasks:
     - yum: name=* state=latest
     - yum: name=libselinux-python
