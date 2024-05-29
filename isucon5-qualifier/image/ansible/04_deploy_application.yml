@@ -40,18 +40,6 @@
       args:
         chdir: /home/isucon/webapp/go
 
-    - name: fix sbt uri
-      replace:
-        dest: /home/isucon/webapp/scala/sbt
-        regexp: 'http://repo\.typesafe\.com/'
-        replace: 'https://repo.typesafe.com/'
-
-    # TODO: - npm install
-    # TODO: - composer?
-    - name: scala
-      shell: ./sbt launcher
-      args:
-        chdir: /home/isucon/webapp/scala
 
   # post_tasks:
     # - command: sudo su - isucon /home/isucon/init.sh
