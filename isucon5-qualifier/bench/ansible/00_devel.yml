@@ -4,7 +4,7 @@
   become_method: sudo
   gather_facts: no
   tasks:
-    - apt: name=python-selinux state=present update_cache=true
+    - apt: name=python3-selinux state=present update_cache=true
     - service: name=apparmor enabled=no state=stopped
     - apt: name={{item}} state=present
       with_items:
