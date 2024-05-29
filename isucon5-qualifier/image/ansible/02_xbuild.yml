@@ -9,14 +9,6 @@
         dest=/home/root/.xbuild
         update=yes
         force=yes
-    # node
-    - command: /home/root/.xbuild/node-install v0.12.7 /home/root/.local/node
-      args:
-        creates: /home/root/.local/node/bin/node
-    # python3
-    - command: /home/root/.xbuild/python-install 3.4.3 /home/root/.local/python3
-      args:
-        creates: /home/root/.local/python3/bin/python
     # golang
     - command: /home/root/.xbuild/go-install 1.10 /home/root/.local/go
       args:

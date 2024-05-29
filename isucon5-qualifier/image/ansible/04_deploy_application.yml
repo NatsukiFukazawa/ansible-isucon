@@ -13,12 +13,6 @@
       args:
         removes: /tmp/isucon5-qualify
 
-    # python
-    - command: /home/isucon/.local/python3/bin/pip install --upgrade setuptools
-    - command: /home/isucon/.local/python3/bin/pip install bottle
-    - command: /home/isucon/.local/python3/bin/pip install pymysql
-    - command: /home/isucon/.local/python3/bin/pip install gunicorn
-
     - name: go get mysql
       shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/go-sql-driver/mysql
       args:
