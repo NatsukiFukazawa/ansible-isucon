@@ -4,15 +4,16 @@
   become_user: root
   gather_facts: no
   tasks:
-    - git:
+    - name: install go
+      git:
         repo=https://github.com/tagomoris/xbuild.git
-        dest=/home/root/.xbuild
+        dest=/home/isucon/.xbuild
         update=yes
         force=yes
     # golang
-    - command: /home/root/.xbuild/go-install 1.10 /home/root/.local/go
+    - command: /home/isucon/.xbuild/go-install 1.10 /home/isucon/.local/go
       args:
-        creates: /home/root/.local/go/bin/go
+        creates: /home/isucon/.local/go/bin/go
 
 - hosts: imageservers
   become: yes
