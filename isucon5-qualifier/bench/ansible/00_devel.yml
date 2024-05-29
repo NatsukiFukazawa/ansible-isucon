@@ -27,8 +27,8 @@
         - libcurl4-openssl-dev 
         - libjpeg-turbo8 
         - libjpeg-turbo8-dev 
-        - libpng12-0 
-        - libpng12-dev 
+        - libpng16-6
+        - libpng-dev 
         - libmcrypt4 
         - libmcrypt-dev 
         - libtidy-0.99-0 
