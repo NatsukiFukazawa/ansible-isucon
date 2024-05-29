@@ -30,8 +30,7 @@
         - libpng16-16
         - libpng-dev 
         - libmcrypt4 
-        - libmcrypt-dev 
-        - libtidy5
+        - libmcrypt-dev
         - libtidy-dev 
         - libxml2-dev 
         - libxslt1-dev 
