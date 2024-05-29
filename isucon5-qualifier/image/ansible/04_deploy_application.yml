@@ -13,24 +13,20 @@
       args:
         removes: /tmp/isucon5-qualify
 
-    - name: go mod init
-      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go mod init isucon5
-      args:
-        chdir: /home/isucon/webapp/go
-    - name: go get mysql
-      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/go-sql-driver/mysql@latest
+    - name: go install mysql
+      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/go-sql-driver/mysql
       args:
         chdir: /home/isucon/webapp/go
     - name: go get context
-      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/context@latest
+      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/context
       args:
         chdir: /home/isucon/webapp/go
     - name: go get mux
-      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/mux@latest
+      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/mux
       args:
         chdir: /home/isucon/webapp/go
     - name: go get sessions
-      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/sessions@latest
+      shell: PATH=/home/isucon/.local/go/bin:$PATH GOROOT=/home/isucon/.local/go GOPATH=/home/isucon/webapp/go go get github.com/gorilla/sessions
       args:
         chdir: /home/isucon/webapp/go
     - name: go build
